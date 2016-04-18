@@ -1,0 +1,4 @@
+working_directory /home/jan/Code/project
+pid               /home/jan/Code/project/tmp/pids/unicorn-app.pid"
+listen            /home/jan/Code/project/tmp/sockets/unicorn.project-app.sock"
+worker_processes  1
