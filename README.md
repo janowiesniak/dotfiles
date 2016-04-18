@@ -1,6 +1,7 @@
 # Personal dotfiles
 
 * Clone this repo with `mkdir $HOME/Code && cd $HOME/Code && git clone git@github.com:JanOwiesniak/dotfiles.git`
+* Init and update git submodule `cd $HOME/Code/dotfiles && git submodule init && git submodule update` 
 
 # Manage dotfile with stow
 
