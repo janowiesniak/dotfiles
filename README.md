@@ -4,6 +4,6 @@
 
 # Manage dotfile with stow
 
-* Install "stow":http://www.gnu.org/software/stow/manual/stow.html with `$ apt-get install stow`
+* Install [stow](http://www.gnu.org/software/stow/manual/stow.html) with `$ apt-get install stow`
 * Configure bash: `stow -t $HOME bash -d $HOME/Code/dotfiles`
 * Configure vim: `stow -t $HOME vim -d $HOME/Code/dotfiles`
