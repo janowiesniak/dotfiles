@@ -6,6 +6,7 @@ let mapleader = ","
 map <leader>e :!mix test<CR> " Run elixir tests
 map <leader>r :!rake<CR> " Run ruby tests
 map <leader>f :CtrlP<CR>
+map <leader><F5> :CtrlPClearCache<CR>
 
 set nocompatible      " We're running Vim, not Vi!
 set number            " Show numbers
