@@ -44,3 +44,17 @@ match OverLength /\%81v.\+/
 
 """"" Fuzzy Search Plugin =======================
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+" Tags with ctags
+function! UpdateTags()
+  let f = expand("%:p:h")
+  let cwd = getcwd()
+  let tagfilename = cwd . "/.ctags"
+  let cmd = 'ctags -R -f ' . tagfilename . ' ' . '"' . f . '"'
+  let resp = system(cmd)
+endfunction
+
+nmap <leader>t :CtrlPTag<CR>
+nmap <leader>T :call UpdateTags()<CR>
+set tags=.ctags
+
