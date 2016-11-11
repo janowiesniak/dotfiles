@@ -50,7 +50,7 @@ function! UpdateTags()
   let f = expand("%:p:h")
   let cwd = getcwd()
   let tagfilename = cwd . "/.ctags"
-  let cmd = 'ctags -R -f ' . tagfilename . ' ' . '"' . f . '"'
+  let cmd = 'ctags -R --exclude=node_modules -f ' . tagfilename . ' ' . '"' . f . '"'
   let resp = system(cmd)
 endfunction
 
