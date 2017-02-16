@@ -150,3 +150,16 @@ export EDITOR=vim
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH=$PATH:$HOME/Code/nit/bin
 source $HOME/Code/nit/bin/nit.completion
+
+_go_autocomplete()
+{
+  local entered_option
+  local options=$(./go usage | tr -s '|' ' ' | cut -d' ' -f3-)
+
+  COMPREPLY=()
+  entered_option="${COMP_WORDS[COMP_CWORD]}"
+  COMPREPLY=( $(compgen -W "${options}" -- ${entered_option}) )
+
+  return 0
+}
+complete -o nospace -F _go_autocomplete ./go
