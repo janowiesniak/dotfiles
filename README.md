@@ -1,7 +1,7 @@
 # Clone Repository
 
 ```
-mkdir $HOME/Code && cd $HOME/Code && git clone git@github.com:JanOwiesniak/dotfiles.git
+$ mkdir $HOME/Code && cd $HOME/Code && git clone git@github.com:JanOwiesniak/dotfiles.git
 ```
 
 # Update Git Submodules
@@ -21,7 +21,7 @@ $ apt-get install stow
 ## MAC OS
 
 ```
-brew install stow
+$ brew install stow
 ```
 
 # Create Symlinks
