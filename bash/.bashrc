@@ -130,7 +130,7 @@ alias gbav='git for-each-ref --shell --format="echo %(refname:short) && git lg -
 
 function gconf() {
   git config user.name "Jan Owiesniak" 
-  git config user.email "owiesniak@mailbox.org" 
+  git config user.email "git@owiesniak.io" 
 }
 
 # enable programmable completion features (you don't need to enable
