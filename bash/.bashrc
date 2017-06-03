@@ -72,26 +72,6 @@ xterm*|rxvt*)
     ;;
 esac
 
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    alias dir='dir --color=auto'
-    alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
-
-# colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
-# some more ls aliases
-alias ll='ls -l'
-alias la='ls -A'
-alias l='ls -CF'
-
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -104,35 +84,6 @@ fi
 export LC_ALL='en_US.UTF8'
 export LANG='en_US.UTF8'
 
-# GIT
-
-alias ga='git add'
-alias gaf='git add -f'
-alias gap='git add --patch'
-alias gb='git branch -v'
-alias gba='gb -avv'
-alias gc='git commit -v'
-alias gca='gc -a'
-alias gco='git checkout'
-alias gd='git diff'
-alias gdc='git diff --cached'
-alias gl='git pull -v'
-alias glr='git pull -v --rebase'
-alias gg="git log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %C(bold)%s %Creset%C(white)%cn%Creset %C(green)%cr' --abbrev-commit --date=relative"
-alias gp='git push -v'
-alias ggrep='git grep'
-alias gst='git status -s'
-alias gr='git grep'
-alias gfa='git fetch --all'
-alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
-alias gls='git ls-files'
-alias gbav='git for-each-ref --shell --format="echo %(refname:short) && git lg -n 1 %(refname)" refs/ |sh'
-
-function gconf() {
-  git config user.name "Jan Owiesniak" 
-  git config user.email "git@owiesniak.io" 
-}
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -144,6 +95,12 @@ if ! shopt -oq posix; then
   fi
 fi
 
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
 export EDITOR=vim
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+function gconf() {
+  git config user.name "Jan Owiesniak" 
+  git config user.email "git@owiesniak.io" 
+}
+
