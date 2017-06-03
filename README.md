@@ -1,11 +1,31 @@
-# Personal dotfiles
+# Clone Repository
 
-* Clone this repo with `mkdir $HOME/Code && cd $HOME/Code && git clone git@github.com:JanOwiesniak/dotfiles.git`
-* Init and update git submodule `cd $HOME/Code/dotfiles && git submodule init && git submodule update` 
+```
+mkdir $HOME/Code && cd $HOME/Code && git clone git@github.com:JanOwiesniak/dotfiles.git
+```
 
-# Manage dotfile with stow
+# Update Git Submodules
 
-* Install [stow](http://www.gnu.org/software/stow/manual/stow.html) with `$ apt-get install stow`
-* Configure bash: `stow -t $HOME bash -d $HOME/Code/dotfiles`
-* Configure vim: `stow -t $HOME vim -d $HOME/Code/dotfiles`
-* Configure mysql: `stow -t $HOME mysql -d $HOME/Code/dotfiles`
+```
+$ cd $HOME/Code/dotfiles && git submodule init && git submodule update`
+```
+
+# Install [stow](http://www.gnu.org/software/stow/manual/stow.html)
+
+## UNIX
+
+```
+$ apt-get install stow
+```
+
+## MAC OS
+
+```
+brew install stow
+```
+
+# Create Symlinks
+
+```
+$ ./install.sh
+```
